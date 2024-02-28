@@ -13,4 +13,14 @@
 441	486	7298126954374581	libs/algorithms/libalgorithms.a	3e82eba02ca2cba1
 4	95	7299607939274766	libs/data_structures/CMakeFiles/data_structures.dir/unordered_array_set/unordered_array_set.c.obj	1930453fe0eaa260
 3	96	7299607939274766	CMakeFiles/untitled.dir/libs/data_structures/unordered_array_set/unordered_array_set.c.obj	29339bcdb3fc747f
-0	93	7300714688353605	build.ninja	23ef4b0417b0747d
+0	93	7307638389095552	build.ninja	23ef4b0417b0747d
+5	510	7307650620176861	libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj	94b89dff37694caf
+3	518	7307650620176861	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
+510	687	7307650621965771	libs/data_structures/libdata_structures.a	2d845ce638d530f4
+687	1432	7307650629381593	untitled.exe	702d67380def9219
+3	78	7307650858307449	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
+79	169	7307650859176907	untitled.exe	702d67380def9219
+3	81	7307650907123190	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
+81	155	7307650907852727	untitled.exe	702d67380def9219
+3	76	7307650982178856	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
+76	152	7307650982918398	untitled.exe	702d67380def9219
