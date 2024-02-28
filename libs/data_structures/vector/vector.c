@@ -37,7 +37,7 @@ void reserve(vector *v, size_t newCapacity) {
     }
 }
 
-void clear(vector *v){
+void clear(vector *v) {
     v->size = 0;
 }
 
@@ -45,27 +45,27 @@ void shrinkToFit(vector *v) {
     reserve(v, v->size);
 }
 
-void deleteVector(vector *v){
+void deleteVector(vector *v) {
     free(v->data);
     v->data = NULL;
     v->size = 0;
     v->capacity = 0;
 }
 
-bool isEmpty(vector *v){
+bool isEmpty(vector *v) {
     return v->size == 0;
 }
 
-bool isFull(vector *v){
+bool isFull(vector *v) {
     return v->size == v->capacity;
 }
 
-int getVectorValue(vector *v, size_t i){
+int getVectorValue(vector *v, size_t i) {
     return v->data[i];
 }
 
-void pushBack(vector *v, int x){
-    if (isFull(v)){
+void pushBack(vector *v, int x) {
+    if (isFull(v)) {
         size_t new_capacity;
 
         if (v->capacity == 0)
@@ -80,8 +80,8 @@ void pushBack(vector *v, int x){
     v->size++;
 }
 
-void popBack(vector *v){
-    if (isEmpty(v)){
+void popBack(vector *v) {
+    if (isEmpty(v)) {
         fprintf(stderr, "vector is empty");
         exit(1);
     }
@@ -89,8 +89,8 @@ void popBack(vector *v){
     v->size--;
 }
 
-int* atVector(vector *v, size_t index){
-    if (index >= v->capacity){
+int *atVector(vector *v, size_t index) {
+    if (index >= v->capacity) {
         fprintf(stderr, "IndexError: a[%lld] is not exists", index);
         exit(1);
     }
@@ -98,8 +98,8 @@ int* atVector(vector *v, size_t index){
     return &v->data[index];
 }
 
-int* back(vector *v){
-    if (isEmpty(v)){
+int *back(vector *v) {
+    if (isEmpty(v)) {
         fprintf(stderr, "vector is empty");
         exit(1);
     }
@@ -107,8 +107,8 @@ int* back(vector *v){
     return &v->data[v->size - 1];
 }
 
-int* front(vector *v){
-    if (isEmpty(v)){
+int *front(vector *v) {
+    if (isEmpty(v)) {
         fprintf(stderr, "vector is empty");
         exit(1);
     }
