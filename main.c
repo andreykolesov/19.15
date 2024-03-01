@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "libs/data_structures/vector/vector.h"
+#include "libs/data_structures/vector/vectorVoid.h"
 
 void test_pushBack_emptyVector(){
     vector v = createVector(0);
@@ -51,14 +52,20 @@ void test(){
 }
 
 int main() {
-    test();
+    //test();
 
-    typedef struct vectorVoid {
-        void *data;
-        size_t size;
-        size_t capacity;
-        size_t baseTypeSize;
-    } vectorVoid;
+    size_t n;
+    scanf("%zd", &n);
+    vectorVoid v = createVectorV(0, sizeof(float));
+    for (int i = 0; i < n; i++) {
+        float x;
+        scanf("%f", &x);
+        pushBackV(&v, &x);
+    }
+    for (int i = 0; i < n; i++) {
+        float x;
+        getVectorValueV(&v, i, &x);
+        printf("%f ", x);
+    }
 
-    return 0;
 }
