@@ -53,5 +53,12 @@ void test(){
 int main() {
     test();
 
+    typedef struct vectorVoid {
+        void *data;
+        size_t size;
+        size_t capacity;
+        size_t baseTypeSize;
+    } vectorVoid;
+
     return 0;
 }
