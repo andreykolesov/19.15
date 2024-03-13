@@ -78,7 +78,7 @@ void setVectorValueV(vectorVoid *v, size_t index, void *source) {
     memcpy(address, source, v->baseTypeSize);
 }
 
-void popBackV(vectorVoid *v){
+void popBackV(vectorVoid *v) {
     if (isEmptyV(v)) {
         fprintf(stderr, "vector is empty");
         exit(1);
@@ -87,7 +87,7 @@ void popBackV(vectorVoid *v){
     v->size--;
 }
 
-void pushBackV(vectorVoid *v, int *source){
+void pushBackV(vectorVoid *v, int *source) {
     if (isFullV(v)) {
         size_t new_capacity;
 
