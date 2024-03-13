@@ -43,4 +43,21 @@ void inputMatrices(matrix *ms, int nMatrices) {
         inputMatrix(&ms[i]);
 }
 
+void outputMatrix(matrix m) {
+    for (int i = 0; i < m.nRows; i++) {
+        for (int j = 0; i < m.nCols; i++)
+            printf("%d", m.values[i][j]);
+
+        printf("\n");
+    }
+}
+
+void outputMatrices(matrix *ms, int nMatrices) {
+    for (int i = 0; i < nMatrices; i++) {
+        outputMatrix(ms[i]);
+
+        printf("\n");
+    }
+}
+
 
