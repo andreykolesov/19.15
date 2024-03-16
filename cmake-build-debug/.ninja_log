@@ -1,13 +1,13 @@
 # ninja log v5
-2	104	7310169310612401	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
-161	233	7310169311871719	untitled.exe	702d67380def9219
+3	116	7323321716950389	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
+116	185	7323321717609980	untitled.exe	702d67380def9219
 3	77	7299711157727530	libs/data_structures/CMakeFiles/data_structures.dir/bitset/bitset.c.obj	a985beaf8a08578e
-3	86	7310169310422523	libs/data_structures/CMakeFiles/data_structures.dir/vectorVoid/vectorVoid.c.obj	96bb18cd2428a1ab
+33	796	7323247580232800	libs/data_structures/CMakeFiles/data_structures.dir/vectorVoid/vectorVoid.c.obj	96bb18cd2428a1ab
 5	105	7299613832428796	CMakeFiles/untitled.dir/libs/data_structures/ordered_array_set/ordered_array_set.c.obj	8b4704932693180a
 9	521	7292672656010750	libs/algorithms/CMakeFiles/algorithms.dir/algorithm.c.obj	45ffd24733920da6
 3	84	7298947400874940	CMakeFiles/untitled.dir/libs/data_structures/bitset/bitset.c.obj	f8496551f910cac0
 6	523	7292672656010750	CMakeFiles/untitled.dir/libs/algorithms/algorithm.c.obj	83e97dc27b3927ff
-86	161	7310169311102184	libs/data_structures/libdata_structures.a	1d87a25135a77e90
+128	170	7323290382446025	libs/data_structures/libdata_structures.a	c7190c3a58018805
 3	441	7298126953884893	CMakeFiles/untitled.dir/libs/algorithms/array/array.c.obj	821db9078f84c456
 5	105	7299759283448916	libs/data_structures/CMakeFiles/data_structures.dir/ordered_array_set/ordered_array_set.c.obj	c8517bf164d3c971
 8	441	7298126953884893	libs/algorithms/CMakeFiles/algorithms.dir/array/array.c.obj	86f9f65d55342a7d
@@ -16,4 +16,13 @@
 3	96	7299607939274766	CMakeFiles/untitled.dir/libs/data_structures/unordered_array_set/unordered_array_set.c.obj	29339bcdb3fc747f
 0	88	7320497210820740	build.ninja	23ef4b0417b0747d
 2	75	7310103852736788	libs/data_structures/CMakeFiles/data_structures.dir/vector/vectorVoid.c.obj	4d3a08d05e243732
-6	725	7310078266084825	libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj	94b89dff37694caf
+26	787	7323247580132857	libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj	94b89dff37694caf
+4	128	7323290382026290	libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj	cd4c344588762416
+4	107	7323322429770187	libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj	cd4c344588762416
+3	120	7323322429890102	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
+107	162	7323322430319853	libs/data_structures/libdata_structures.a	c7190c3a58018805
+162	234	7323322430999415	untitled.exe	702d67380def9219
+4	140	7323322474534528	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
+140	211	7323322475214108	untitled.exe	702d67380def9219
+3	136	7323322522617164	CMakeFiles/untitled.dir/main.c.obj	4c8a2a2f6dd0bdd2
+136	208	7323322523306730	untitled.exe	702d67380def9219

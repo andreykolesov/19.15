@@ -36,7 +36,7 @@ void freeMemMatrices(matrix *ms, int nMatrices) {
 
 void inputMatrix(matrix *m) {
     for (int i = 0; i < m->nRows; i++)
-        for (int j = 0; i < m->nCols; i++)
+        for (int j = 0; j < m->nCols; j++)
             scanf("%d", &(m->values[i][j]));
 }
 
@@ -47,7 +47,7 @@ void inputMatrices(matrix *ms, int nMatrices) {
 
 void outputMatrix(matrix m) {
     for (int i = 0; i < m.nRows; i++) {
-        for (int j = 0; i < m.nCols; i++)
+        for (int j = 0; j < m.nCols; j++)
             printf("%d", m.values[i][j]);
 
         printf("\n");
@@ -82,37 +82,19 @@ void swapColumns(matrix m, int j1, int j2) {
     }
 }
 
-int getSum(int *a, int n) {
-    int sum = 0;
-
-    for (int i = 0; i < n; i++)
-        sum += a[i];
-
-    return sum;
-}
-
-void insertionSortRowsMatrixByRowCriteria(matrix m, int (*getSum)(int *, int)) {
-    int *a = (int *) malloc(sizeof(int) * m.nRows);
-
-    for (int i = 0; i < m.nRows; i++)
-        a[i] = getSum(m.values[i], m.nCols);
-
+void insertionSortRowsMatrixByRowCriteria(matrix m, int (*criteria)(int*, int)) {
     for (int i = 1; i < m.nRows; i++) {
-        int key = a[i];
+        int key = criteria(m.values[i], m.nCols);
         int j = i - 1;
 
-        while (j >= 0 && a[j] > key) {
-            a[j + 1] = a[j];
-            m.values[j + 1] = m.values[j];
+        while (j >= 0 && criteria(m.values[j], m.nCols) > key) {
+            swapRows(m, j, j + 1);
             j--;
         }
-
-        a[j + 1] = key;
-        swapRows(m, j + 1, i);
     }
 }
 
-void selectionSortColsMatrixByColCriteria(matrix m, int (*getSum)(int *, int)) {
+void selectionSortColsMatrixByColCriteria(matrix m, int (*criteria)(int *, int)) {
     int *col_values = (int *) malloc(sizeof(int) * m.nCols);
 
     for (int i = 0; i < m.nCols; i++) {
@@ -122,7 +104,7 @@ void selectionSortColsMatrixByColCriteria(matrix m, int (*getSum)(int *, int)) {
             cols[j] = m.values[j][i];
         }
 
-        col_values[i] = getSum(cols, m.nRows);
+        col_values[i] = criteria(cols, m.nRows);
     }
 
     for (int i = 0; i < m.nCols - 1; i++) {
@@ -184,7 +166,7 @@ bool isSymmetricMatrix(matrix *m) {
 
 void transposeSquareMatrix(matrix *m) {
     for (int i = 0; i < m->nRows; i++) {
-        for (int j = i + 1; i < m->nCols; j++) {
+        for (int j = i + 1; j < m->nCols; j++) {
             int temp = m->values[i][j];
             m->values[i][j] = m->values[j][i];
             m->values[j][i] = temp;
@@ -195,8 +177,8 @@ void transposeSquareMatrix(matrix *m) {
 void transposeMatrix(matrix *m) {
     matrix transposed = getMemMatrix(m->nCols, m->nRows);
 
-    for (int i = 0; m->nRows; i++)
-        for (int j = 0; m->nCols; j++)
+    for (int i = 0; i < m->nRows; i++)
+        for (int j = 0; j < m->nCols; j++)
             transposed.values[j][i] = m->values[i][j];
 
     freeMemMatrix(m);
@@ -238,4 +220,26 @@ position getMaxValuePos(matrix m) {
     return max_pos;
 }
 
+matrix createMatrixFromArray(const int *a, int nRows, int nCols) {
+    matrix m = getMemMatrix(nRows, nCols);
+    int k = 0;
+
+    for (int i = 0; i < nRows; i++)
+        for (int j = 0; j < nCols; j++)
+            m.values[i][j] = a[k++];
+
+    return m;
+}
+
+matrix *createArrayOfMatrixFromArray(const int *values, size_t nMatrices, size_t nRows, size_t nCols){
+    matrix *ms = getMemArrayOfMatrices(nMatrices, nRows, nCols);
+    int l = 0;
+
+    for (size_t k = 0; k < nMatrices; k++)
+        for (size_t i = 0; i < nRows; i++)
+            for (size_t j = 0; j < nCols; j++)
+                ms[k].values[i][j] = values[l++];
+
+    return ms;
+}
 
